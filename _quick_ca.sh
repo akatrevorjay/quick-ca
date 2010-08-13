@@ -35,6 +35,9 @@ for i in private signedcerts; do
 	fi
 done
 
+[[ ! -f "serial" ]]	&& echo 01 > serial
+[[ ! -f "index.txt" ]]	&& touch index.txt
+
 export OPENSSL_CONF="$OPENSSL_CA_CONF"
 
 if [[ ! -f "$CA_KEY" ]]; then
