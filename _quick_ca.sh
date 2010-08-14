@@ -86,9 +86,9 @@ for c in $SERVER_CERTS; do
 	
 	export OPENSSL_CONF="$OPENSSL_SERVER_CONF"
 	
-	KEY_REQ="server_${c}_req.pem"
-	KEY_ENC="server_${c}_key_enc.pem"
-	KEY_DEC="server_${c}_key.pem"
+	KEY_REQ="server_${c}.req"
+	KEY_ENC="server_${c}_enc.key"
+	KEY_DEC="server_${c}.key"
 	KEY_CRT="server_${c}.crt"
 	KEY_CONT=0
 	
